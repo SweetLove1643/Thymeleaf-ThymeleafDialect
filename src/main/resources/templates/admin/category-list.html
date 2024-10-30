@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Route database</title>
+    </head>
+    <body>
+        <h1>Add route</h1>
+
+    <form method="POST" th:object="${route}" th:action="@{/admin/category}">
+        <h4>Enter your route</h4>
+
+        <label for="name">Route name</label>
+
+        <input type="text" th:field="*{name}"/>
+        <input type="text" th:field="*{grade}"/>
+
+        <button>Submit</button>
+
+    </form>
+
+    <p><a href="/">Home</a></p>
+</body>
+</html>
